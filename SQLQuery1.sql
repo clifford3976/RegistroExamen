@@ -1,8 +1,8 @@
-CREATE DATABASE Parcial1Db
+CREATE DATABASE Parciales1Db
 GO
-USE Parcial1Db
+USE Parciales1Db
 GO
-CREATE TABLE Parcial1
+CREATE TABLE PArciales
 
 (
  ID int primary key identity (1,1)

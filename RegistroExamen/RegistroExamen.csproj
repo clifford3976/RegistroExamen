@@ -104,11 +104,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BLL\" />
+    <Folder Include="DAL\Scripts\" />
     <Folder Include="Entidades\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\Scripts\SQLQuery1.sql" />
     <None Include="Resources\icons8_Delete_Document_32.png" />
     <None Include="Resources\icons8_Save_as_32.png" />
     <None Include="Resources\icons8_Add_Property_32.png" />
