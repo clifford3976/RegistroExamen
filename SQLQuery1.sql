@@ -5,5 +5,6 @@ GO
 CREATE TABLE PArciales
 
 (
- ID int primary key identity (1,1)
+ ID int primary key identity (1,1),
+
 );

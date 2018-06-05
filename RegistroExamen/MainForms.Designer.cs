@@ -31,7 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrosDeLosGruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasDeLosGruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +50,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+     
             // 
             // archivosToolStripMenuItem
             // 
@@ -57,15 +60,33 @@
             // 
             // registrosToolStripMenuItem
             // 
+            this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrosDeLosGruposToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registrosToolStripMenuItem.Text = "Registros";
             // 
+            // registrosDeLosGruposToolStripMenuItem
+            // 
+            this.registrosDeLosGruposToolStripMenuItem.Name = "registrosDeLosGruposToolStripMenuItem";
+            this.registrosDeLosGruposToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.registrosDeLosGruposToolStripMenuItem.Text = "registros de los grupos";
+            this.registrosDeLosGruposToolStripMenuItem.Click += new System.EventHandler(this.registrosDeLosGruposToolStripMenuItem_Click);
+            // 
             // consultasToolStripMenuItem
             // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultasDeLosGruposToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // consultasDeLosGruposToolStripMenuItem
+            // 
+            this.consultasDeLosGruposToolStripMenuItem.Name = "consultasDeLosGruposToolStripMenuItem";
+            this.consultasDeLosGruposToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.consultasDeLosGruposToolStripMenuItem.Text = "consultas de los grupos";
+            this.consultasDeLosGruposToolStripMenuItem.Click += new System.EventHandler(this.consultasDeLosGruposToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -83,6 +104,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForms";
             this.Text = "MainForms";
+            this.Load += new System.EventHandler(this.MainForms_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -97,6 +119,8 @@
         private System.Windows.Forms.ToolStripMenuItem registrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrosDeLosGruposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultasDeLosGruposToolStripMenuItem;
     }
 }
 

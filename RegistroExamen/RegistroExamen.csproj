@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\GruposBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="Entidades\Grupos.cs" />
     <Compile Include="MainForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,9 +105,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\Scripts\" />
-    <Folder Include="Entidades\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +114,9 @@
     <None Include="Resources\icons8_Search_Property_321.png" />
     <None Include="Resources\icons8_Printer_Error_32.png" />
     <None Include="Resources\icons8_Search_Property_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Scripts\SQLQuery1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
