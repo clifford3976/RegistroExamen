@@ -77,7 +77,7 @@ namespace RegistroExamen.UI.Registros
                 Grupos Grupo = LLenaClase();
                 bool paso = false;
 
-                if(GruposnumericUpDown.Value == 0)
+                if(GrupoIdnumericUpDown.Value == 0)
                 {
                     paso = BLL.GruposBLL.Guardar(Grupo);
                 }
