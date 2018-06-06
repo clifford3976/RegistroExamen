@@ -54,6 +54,11 @@
             // FiltrocomboBox
             // 
             this.FiltrocomboBox.FormattingEnabled = true;
+            this.FiltrocomboBox.Items.AddRange(new object[] {
+            "GrupoId",
+            "Fecha",
+            "Descripcion",
+            "Todo"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(134, 13);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(121, 21);
@@ -164,6 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "consulta";
             this.Text = "consulta";
+            this.Load += new System.EventHandler(this.consulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultasdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

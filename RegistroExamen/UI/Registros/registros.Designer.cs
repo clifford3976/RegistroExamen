@@ -176,6 +176,7 @@
             this.gruposnumericUpDown.Name = "gruposnumericUpDown";
             this.gruposnumericUpDown.Size = new System.Drawing.Size(200, 20);
             this.gruposnumericUpDown.TabIndex = 12;
+            this.gruposnumericUpDown.ValueChanged += new System.EventHandler(this.gruposnumericUpDown_ValueChanged);
             // 
             // CantidadnumericUpDown
             // 

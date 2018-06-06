@@ -51,7 +51,7 @@ namespace RegistroExamen.UI.Registros
             Grupo.Descripcion = DescripcionrichTextBox.Text;
             Grupo.Cantidad = Convert.ToInt32(CantidadnumericUpDown.Value);
             Grupo.grupos= Convert.ToInt32(gruposnumericUpDown.Value);
-            Grupo.Integrantes = IntegrantestextBox.Text;
+            IntegrantestextBox.Text = Convert.ToString(Grupo.Cantidad / Grupo.grupos);
 
             return Grupo;
         }
@@ -105,10 +105,24 @@ namespace RegistroExamen.UI.Registros
             
             int id = Convert.ToInt32(GrupoIdnumericUpDown.Value);
             if (BLL.GruposBLL.Eliminar(id))
-                MessageBox.Show("eliminado", "exitosamente",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
+            {
+                MessageBox.Show("eliminado", "exitosamente",
+                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GrupoIdnumericUpDown.Value = 0;
+                FechadateTimePicker.Value = DateTime.Now;
+                DescripcionrichTextBox.Clear();
+                CantidadnumericUpDown.Value = 0;
+                gruposnumericUpDown.Value = 0;
+                IntegrantestextBox.Clear();
+            }
+            else
+            {
+                MessageBox.Show("no fueeliminado", "trate de nuevo",
+                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(GrupoIdnumericUpDown.Value);
@@ -120,7 +134,7 @@ namespace RegistroExamen.UI.Registros
                 DescripcionrichTextBox.Text = Grupo.Descripcion;
                 CantidadnumericUpDown.Value = Grupo.Cantidad;
                 gruposnumericUpDown.Value = Grupo.grupos;
-                IntegrantestextBox.Text = Grupo.Integrantes;
+                IntegrantestextBox.Text = Convert.ToString(Grupo.Cantidad / Grupo.grupos);
             }
            else
             {
@@ -129,6 +143,13 @@ namespace RegistroExamen.UI.Registros
             }
         }
 
+        private void gruposnumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if(CantidadnumericUpDown.Value != 0 && gruposnumericUpDown.Value != 0)
+            {
+                IntegrantestextBox.Text = Convert.ToString(CantidadnumericUpDown.Value / gruposnumericUpDown.Value);
+            }
+        }
     }
 
 }

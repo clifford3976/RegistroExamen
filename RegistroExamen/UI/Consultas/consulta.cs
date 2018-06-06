@@ -38,28 +38,43 @@ namespace RegistroExamen.UI.Consultas
                     Filtro = x => x.Descripcion.Equals(CriteriotextBox.Text) && x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value;
                     break;
 
-                case 3: //Cantidad
+                case 3://todo
+                    ConsultasdataGridView.DataSource = BLL.GruposBLL.GetList(Filtro);
+                    break;
+                case 4: //Cantidad
                     Filtro = x => x.Cantidad.Equals(CriteriotextBox.Text) && x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value;
                     break;
 
-                case 4: //Grupos
+                case 5: //Grupos
                     Filtro = x => x.grupos.Equals(CriteriotextBox.Text) && x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value;
                     break;
 
-                case 5: //Integrantes
+                case 6: //Integrantes
                     Filtro = x => x.Integrantes.Equals(CriteriotextBox.Text) && x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value;
                     break;
 
             }
-            ConsultasdataGridView.DataSource = BLL.GruposBLL.GetList(Filtro);
+            
          }
 
         private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (FiltrocomboBox.SelectedIndex == 1)
+            if(FiltrocomboBox.SelectedIndex == 3)
+            {
                 CriteriotextBox.Enabled = false;
+            }
             else
+            {
                 CriteriotextBox.Enabled = true;
+            }
+
         }
+
+        private void consulta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
