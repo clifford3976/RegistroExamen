@@ -51,7 +51,7 @@ namespace RegistroExamen.UI.Registros
             Grupo.Descripcion = DescripcionrichTextBox.Text;
             Grupo.Cantidad = Convert.ToInt32(CantidadnumericUpDown.Value);
             Grupo.grupos= Convert.ToInt32(gruposnumericUpDown.Value);
-            IntegrantestextBox.Text = Convert.ToString(Grupo.Cantidad / Grupo.grupos);
+            Grupo.Integrantes = IntegrantestextBox.Text;
 
             return Grupo;
         }
