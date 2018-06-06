@@ -19,21 +19,27 @@ namespace RegistroExamen.UI.Registros
 
         public bool Validar()
         {
-            if(string.IsNullOrEmpty(DescripcionrichTextBox.Text))
+            if (string.IsNullOrEmpty(DescripcionrichTextBox.Text))
             {
                 errorProvider1.SetError(DescripcionrichTextBox, "llena el campo de descripcion");
                 return false;
             }
-            if( string.IsNullOrEmpty(CantidadnumericUpDown.ToString()))
+            if (string.IsNullOrEmpty(CantidadnumericUpDown.ToString()))
             {
                 errorProvider1.SetError(CantidadnumericUpDown, "llena el campo de cantidad");
                 return false;
             }
-            if(string.IsNullOrEmpty(GrupoIdnumericUpDown.ToString()))
+            if (string.IsNullOrEmpty(GrupoIdnumericUpDown.ToString()))
             {
                 errorProvider1.SetError(GrupoIdnumericUpDown, "llenar el campo de grupos");
                 return false;
             }
+            if(string.IsNullOrEmpty(gruposnumericUpDown.ToString()))
+                {
+                errorProvider1.SetError(gruposnumericUpDown, "llenar el campo de grupos");
+                return false;
+            }
+        
             return true;
         }
 
@@ -44,7 +50,7 @@ namespace RegistroExamen.UI.Registros
             Grupo.Fecha = FechadateTimePicker.Value;
             Grupo.Descripcion = DescripcionrichTextBox.Text;
             Grupo.Cantidad = Convert.ToInt32(CantidadnumericUpDown.Value);
-            Grupo.grupos = Convert.ToInt32(GrupoIdnumericUpDown.Value);
+            Grupo.grupos= Convert.ToInt32(gruposnumericUpDown.Value);
             Grupo.Integrantes = IntegrantestextBox.Text;
 
             return Grupo;
@@ -61,7 +67,7 @@ namespace RegistroExamen.UI.Registros
             FechadateTimePicker.Value = DateTime.Now;
             DescripcionrichTextBox.Clear();
             CantidadnumericUpDown.Value = 0;
-            GrupoIdnumericUpDown.Value = 0;
+            gruposnumericUpDown.Value = 0;
             IntegrantestextBox.Clear();
         }
 
@@ -99,11 +105,8 @@ namespace RegistroExamen.UI.Registros
             
             int id = Convert.ToInt32(GrupoIdnumericUpDown.Value);
             if (BLL.GruposBLL.Eliminar(id))
-            {
-
                 MessageBox.Show("eliminado", "exitosamente",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -116,7 +119,7 @@ namespace RegistroExamen.UI.Registros
                 FechadateTimePicker.Value = Grupo.Fecha;
                 DescripcionrichTextBox.Text = Grupo.Descripcion;
                 CantidadnumericUpDown.Value = Grupo.Cantidad;
-                GrupoIdnumericUpDown.Value = Grupo.grupos;
+                gruposnumericUpDown.Value = Grupo.grupos;
                 IntegrantestextBox.Text = Grupo.Integrantes;
             }
            else

@@ -9,6 +9,6 @@ CREATE TABLE PArciales
  Fecha date,
  Descripcion varchar(max),
  Cantidad int,
- Grupos int,
+ grupos int,
  Integrantes varchar(max)
 );

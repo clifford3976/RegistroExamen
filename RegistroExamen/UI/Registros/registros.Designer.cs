@@ -41,14 +41,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.GrupoIdnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.GruposnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.gruposnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DescripcionrichTextBox = new System.Windows.Forms.RichTextBox();
             this.IntegrantestextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrupoIdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GruposnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gruposnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,9 +150,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(47, 306);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Grupos";
+            this.label5.Text = "grupos";
             // 
             // label6
             // 
@@ -170,12 +170,12 @@
             this.GrupoIdnumericUpDown.Size = new System.Drawing.Size(200, 20);
             this.GrupoIdnumericUpDown.TabIndex = 10;
             // 
-            // GruposnumericUpDown
+            // gruposnumericUpDown
             // 
-            this.GruposnumericUpDown.Location = new System.Drawing.Point(171, 299);
-            this.GruposnumericUpDown.Name = "GruposnumericUpDown";
-            this.GruposnumericUpDown.Size = new System.Drawing.Size(200, 20);
-            this.GruposnumericUpDown.TabIndex = 12;
+            this.gruposnumericUpDown.Location = new System.Drawing.Point(171, 299);
+            this.gruposnumericUpDown.Name = "gruposnumericUpDown";
+            this.gruposnumericUpDown.Size = new System.Drawing.Size(200, 20);
+            this.gruposnumericUpDown.TabIndex = 12;
             // 
             // CantidadnumericUpDown
             // 
@@ -216,7 +216,7 @@
             this.Controls.Add(this.DescripcionrichTextBox);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.CantidadnumericUpDown);
-            this.Controls.Add(this.GruposnumericUpDown);
+            this.Controls.Add(this.gruposnumericUpDown);
             this.Controls.Add(this.GrupoIdnumericUpDown);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -233,7 +233,7 @@
             this.Load += new System.EventHandler(this.registros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrupoIdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GruposnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gruposnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -250,7 +250,7 @@
         private System.Windows.Forms.RichTextBox DescripcionrichTextBox;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.NumericUpDown CantidadnumericUpDown;
-        private System.Windows.Forms.NumericUpDown GruposnumericUpDown;
+        private System.Windows.Forms.NumericUpDown gruposnumericUpDown;
         private System.Windows.Forms.NumericUpDown GrupoIdnumericUpDown;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
